@@ -16,8 +16,8 @@ Feature: lv.com test
     Given I am on the lvHome page
     Then I click Accept Cookies button
     Then I should see LV= Insurance, Life, Investments, Pensions & Retirement as the Page Title
-    Then I should see banner header as <bannerHeader>
-    Then I should see banner body as <bannerBody>
+    Then I should see Banner Header text as <bannerHeader>
+    Then I should see Banner Body text as <bannerBody>
 
     Examples:
       | bannerHeader   | bannerBody                                              |
@@ -39,3 +39,14 @@ Feature: lv.com test
       | Multi Cover Insurance   |
       | Pensions & Retirement   |
       | I'm a Financial Adviser |
+  
+  Scenario Outline: As a user, I want to go to lv.com/life and validate the below scenarios
+
+    Given I am on the lvlife page
+    Then I click Accept Cookies button
+    Then I should see Life, Investments, Pensions & Equity Release | LV= as the Page Title
+    Then I should see Header Paragraph text as <headerPara>
+
+    Examples:
+      | headerPara |
+      | We know a thing or two about protecting your future, your family and your finances |

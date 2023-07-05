@@ -5,12 +5,12 @@
 
 
 const pageObjects = {
-    pageURL: "https://www.lv.com/",
+    pageURL: "https://www.lv.com/life",
     buttons:[
         { varName: "Accept Cookies", tagType: $('#onetrust-accept-btn-handler') }
     ],
     texts: [
-        { varName: "Banner Header",tagType: $('.headerBanner__category') },
+        { varName: "Header Paragraph",tagType: $('//*[@id="headerBanner"]/div/div[2]/div/div/h2') },
         { varName: "Banner Body",tagType: $('.headerBanner__body__headline') }
     ],
     links: [
@@ -24,7 +24,7 @@ const pageObjects = {
 }
 
 
-class LVHome {
+class LVLife {
 
     // Fetch this web page URL
     getURL(){return pageObjects.pageURL}
@@ -60,4 +60,4 @@ class LVHome {
 
 }
 
-export default new LVHome();
+export default new LVLife();
